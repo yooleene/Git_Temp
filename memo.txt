@@ -1,1 +1,31 @@
-test
+from selenium import webdriver
+
+driver = webdriver.Chrome('chromedriver')
+
+
+pip install --upgrade selenium==3.141.0 --trusted-host files.pythonhosted.org
+
+
+#특정 폴더의 가장 최근에 저장된 파일명을 찾는 함수
+
+import os #보통 내장함수라서 안해도 되나 안되는 PC 있음
+def recentFileName(filePath):
+
+    fileNameTimeList = []
+
+    #해당 경로에 있는 파일들의 생성시간을 함께 리스트로 반환 
+    for fileName in os.listdir(f'{filePath}'):
+        writtenTime = os.path.getctime(f'{filePath}{fileName}')
+        fileNameTimeList.append((fileName, writtenTime))
+
+    #생성시간 역순 정렬
+    sortedFileLst = sorted(fileNameTimeList, key=lambda x: x[1], reverse=True)
+    
+    #처음 리스트 값를 result에 반환
+    recentFile = sortedFileLst[0]
+    result = recentFile[0]
+    
+    return result
+    
+fileName = recentFileName("D:/Downloads/")
+fileName = 'D:/Downloads/' + fileName
