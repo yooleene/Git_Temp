@@ -1,3 +1,6 @@
 from selenium import webdriver
 
 driver = webdriver.Chrome('chromedriver')
+
+
+pip install --upgrade selenium==3.141.0 --trusted-host files.pythonhosted.org
