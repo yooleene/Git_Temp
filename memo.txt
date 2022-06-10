@@ -60,3 +60,5 @@ pyautogui.hotkey('alt', 'a') #내림차순으로 정렬
 pyautogui.press(['s','d'])
 # pyautogui.press('s')
 # pyautogui.press('d')
+
+pywinauto.application.Application().connect(handle=win._hWnd).top_window().set_focus()
