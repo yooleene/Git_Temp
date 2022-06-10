@@ -29,3 +29,12 @@ def recentFileName(filePath):
     
 fileName = recentFileName("D:/Downloads/")
 fileName = 'D:/Downloads/' + fileName
+
+
+score = [
+    ('홍길동1','80','90','70'),
+    ('홍길동2','90','85','75'),
+    ('홍길동3','60','85','65'),
+    ('홍길동4','100','100','100'),
+    ('홍길동5','90','95','95')
+    ]
