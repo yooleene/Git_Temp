@@ -38,3 +38,25 @@ score = [
     ('홍길동4','100','100','100'),
     ('홍길동5','90','95','95')
     ]
+    
+pyautogui.sleep(3) #실습시 단계별 실행시 대기시간에 엑셀 클릭(활성화)
+pyautogui.hotkey('ctrl', 'g')  #특정 셀로 이동할 수 있는 창을 실행
+pyautogui.write('a1', interval=0.1)  #이동 창에 참조 셀을 ‘a1’을 입력하여 ‘A1’셀로 이동 
+pyautogui.press('enter')
+pyautogui.sleep(0.5)
+pyautogui.hotkey('ctrl', 'a')  #데이터가 있는 전체 셀을 선택 선택
+pyautogui.sleep(0.5)
+pyautogui.hotkey('alt', 'h')  #단축키를 사용하여 가운데 정렬
+pyautogui.press(['c','2'])
+# pyautogui.press('c')
+# pyautogui.press('2')
+pyautogui.sleep(0.5)
+pyautogui.hotkey('ctrl', 't')  #핫키(ctrl+t)를 입력하여 표 만들기를 설정
+pyautogui.press('enter')
+pyautogui.hotkey('ctrl', 'g') 
+pyautogui.write('e1', interval=0.1) #총점 순으로 정렬하기 위해 E1셀로 이동
+pyautogui.press('enter')
+pyautogui.hotkey('alt', 'a') #내림차순으로 정렬
+pyautogui.press(['s','d'])
+# pyautogui.press('s')
+# pyautogui.press('d')
